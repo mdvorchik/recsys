@@ -21,7 +21,7 @@ class BestContextual(Recommender):
         if previous_track is None:
             return self.toppop.recommend_next(user, prev_track, prev_track_time)
 
-        if prev_track_time > 0.5:
+        if prev_track_time > 0.6:
             previous_track = self.catalog.from_bytes(previous_track)
             recommendations = previous_track.recommendations
             if not recommendations:
